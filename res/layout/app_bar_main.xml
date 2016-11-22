@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+<!--
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_email" />-->
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/masonry_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="7">
+        <TextView android:text="@+id/EditText01"
+            android:id="@+id/EditText01"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="210sp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:hint="Take a note..."
+            android:clickable="true"
+            android:onClick="perform_action">
+        </TextView>
+            <TextView
+                android:id="@+id/button1"
+                android:layout_height="46dp"
+                android:layout_width="40dp"
+                android:layout_column="3"
+                android:layout_row="0"
+                android:text="S"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:textSize="18dp"
+                android:textColor="#939393" />
+
+            <TextView
+                android:id="@+id/button2"
+                android:layout_height="46dp"
+                android:layout_width="40dp"
+                android:layout_column="4"
+                android:layout_row="0"
+                android:text="S"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:textSize="18dp"
+                android:textColor="#939393" />
+
+            <TextView
+                android:id="@+id/button3"
+                android:layout_height="46dp"
+                android:layout_width="40dp"
+                android:layout_column="5"
+                android:layout_row="0"
+                android:text="S"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:textSize="18dp"
+                android:textColor="#939393" />
+
+            <TextView
+                android:id="@+id/button4"
+                android:layout_height="46dp"
+                android:layout_width="40dp"
+                android:layout_column="6"
+                android:layout_row="0"
+                android:text="S"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:textSize="18dp"
+                android:textColor="#939393"/>
+        </GridLayout>
+    </LinearLayout>
+    <!--<RelativeLayout
+        android:id="@+id/bottomBox"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:layout_alignParentBottom="true">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:columnCount="7">
+        &lt;!&ndash;android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="1sp"/>&ndash;&gt;
+
+        <TextView
+            android:id="@+id/edit_text"
+            android:layout_height="match_parent"
+            android:layout_width="155dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="fill_horizontal|bottom"
+            android:hint="Take a note..."
+            android:scrollbars="vertical"
+            android:background="@android:color/white"
+            android:textSize="17sp"
+            android:textColor="#939393"
+            android:onClick="perform_action"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/button1"
+            android:layout_height="46dp"
+            android:layout_width="40dp"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:text="S"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:textSize="18dp"
+            android:textColor="#939393" />
+
+        <TextView
+            android:id="@+id/button2"
+            android:layout_height="46dp"
+            android:layout_width="40dp"
+            android:layout_column="4"
+            android:layout_row="0"
+            android:text="S"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:textSize="18dp"
+            android:textColor="#939393" />
+
+        <TextView
+            android:id="@+id/button3"
+            android:layout_height="46dp"
+            android:layout_width="40dp"
+            android:layout_column="5"
+            android:layout_row="0"
+            android:text="S"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:textSize="18dp"
+            android:textColor="#939393" />
+
+        <TextView
+            android:id="@+id/button4"
+            android:layout_height="46dp"
+            android:layout_width="40dp"
+            android:layout_column="6"
+            android:layout_row="0"
+            android:text="S"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:textSize="18dp"
+            android:textColor="#939393"/>
+    </GridLayout>
+    </RelativeLayout>-->
+    <!--<RelativeLayout
+        android:id="@+id/bottomBox"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:hint="Take a note..."
+            android:textSize="18dp"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:background="#ffffff"
+            android:gravity="bottom">
+        </EditText>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="List"
+            android:id="@+id/button"
+            android:layout_marginLeft="200dp"
+            android:layout_gravity="bottom|end"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Image"
+            android:id="@+id/button2"
+            android:layout_gravity="bottom|end"
+            android:layout_marginLeft="250dp"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="Image"
+            android:id="@+id/button3"
+            android:layout_gravity="bottom|end"
+            android:layout_marginLeft="300dp"/>
+    </RelativeLayout>-->
+</RelativeLayout>
